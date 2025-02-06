@@ -1,10 +1,7 @@
 package com.digitinary.DStore.controller;
 
 import com.digitinary.DStore.model.request.CreateOrUpdateAddressRequest;
-import com.digitinary.DStore.model.request.CreateUserRequest;
-import com.digitinary.DStore.model.request.UpdateUserRequest;
 import com.digitinary.DStore.model.response.AddressResponse;
-import com.digitinary.DStore.model.response.UserResponse;
 import com.digitinary.DStore.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -26,52 +23,6 @@ import java.util.Set;
 public class UserController {
     private final UserService userService;
 
-    @Operation(description = """
-            An endpoint to register new users.
-            """)
-    @PostMapping("/register")
-    public ResponseEntity<String> register(@RequestBody @Valid CreateUserRequest request) {
-        log.debug("User to be created: {}", request);
-        userService.createNewUser(request);
-        return ResponseEntity.status(HttpStatus.CREATED).body("User created successfully.");
-    }
-
-    @Operation(description = """
-            An endpoint to retrieve all users.
-            """)
-    @GetMapping
-    public Set<UserResponse> getAllUsers() {
-        log.info("Returning all users.");
-        return userService.getAllUsers();
-    }
-
-    @Operation(description = """
-            An endpoint to get a user by their id.
-            """)
-    @GetMapping("/{id}")
-    public UserResponse getUserById(@PathVariable Integer id) {
-        return userService.getUserById(id);
-    }
-
-    @Operation(description = """
-            An endpoint to update an existing user.
-            """)
-    @PutMapping("/{id}")
-    public ResponseEntity<String> updateUser(@PathVariable Integer id, @RequestBody @Valid UpdateUserRequest request) {
-        log.debug("User update request: {}", request);
-        userService.updateUser(id, request);
-        return ResponseEntity.ok("User updated successfully.");
-    }
-
-    @Operation(description = """
-            An endpoint to delete an existing user.
-            """)
-    @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteUser(@PathVariable Integer id) {
-        log.warn("User to be deleted: {}", userService.getUserById(id));
-        userService.deleteUser(id);
-        return ResponseEntity.ok("User deleted successfully.");
-    }
 
     @Operation(description = """
             An endpoint to assign a new address to an existing user.
@@ -119,7 +70,7 @@ public class UserController {
             An endpoint to delete a specific address of an existing user.
             """)
     @DeleteMapping("/{user_id}/addresses/{address_id}")
-    public ResponseEntity<String> deleteAddress(@PathVariable Integer user_id, @PathVariable Integer address_id){
+    public ResponseEntity<String> deleteAddress(@PathVariable Integer user_id, @PathVariable Integer address_id) {
         log.warn("Deleting address with id: {}", address_id);
         userService.deleteAddress(user_id, address_id);
         return ResponseEntity.ok("Address deleted successfully.");

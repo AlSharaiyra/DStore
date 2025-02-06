@@ -1,6 +1,6 @@
-package com.digitinary.DStore.model.entity;
+package com.digitinary.DStore.repository.entity;
 
-import com.digitinary.DStore.enums.PaymentMethod;
+import com.digitinary.DStore.model.enums.PaymentMethod;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

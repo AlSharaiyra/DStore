@@ -1,4 +1,4 @@
-package com.digitinary.DStore.security;
+package com.digitinary.DStore.infra.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

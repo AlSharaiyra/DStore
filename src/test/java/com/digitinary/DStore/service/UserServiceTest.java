@@ -1,13 +1,11 @@
 package com.digitinary.DStore.service;
 
-import com.digitinary.DStore.enums.Gender;
-import com.digitinary.DStore.exception.ResourceNotFoundException;
-import com.digitinary.DStore.model.entity.User;
+import com.digitinary.DStore.model.enums.Gender;
+import com.digitinary.DStore.infra.exception.ResourceNotFoundException;
+import com.digitinary.DStore.repository.entity.User;
 import com.digitinary.DStore.model.mapper.UserMapper;
 import com.digitinary.DStore.model.request.CreateUserRequest;
-import com.digitinary.DStore.model.response.UserResponse;
-import com.digitinary.DStore.repository.UserRepository;
-import com.digitinary.DStore.service.UserService;
+import com.digitinary.DStore.repository.repo.UserRepository;
 import jakarta.validation.ValidationException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -15,11 +13,11 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import jakarta.validation.ValidationException;
 import java.util.Optional;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.*;
-import static org.junit.jupiter.api.Assertions.*;
 
 class UserServiceTest {
 

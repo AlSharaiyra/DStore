@@ -1,6 +1,6 @@
-package com.digitinary.DStore.repository;
+package com.digitinary.DStore.repository.repo;
 
-import com.digitinary.DStore.model.entity.Product;
+import com.digitinary.DStore.repository.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 

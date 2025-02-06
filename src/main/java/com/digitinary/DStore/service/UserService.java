@@ -1,9 +1,9 @@
 package com.digitinary.DStore.service;
 
-import com.digitinary.DStore.exception.ResourceNotFoundException;
-import com.digitinary.DStore.model.entity.Address;
-import com.digitinary.DStore.model.entity.Cart;
-import com.digitinary.DStore.model.entity.User;
+import com.digitinary.DStore.infra.exception.ResourceNotFoundException;
+import com.digitinary.DStore.repository.entity.Address;
+import com.digitinary.DStore.repository.entity.Cart;
+import com.digitinary.DStore.repository.entity.User;
 import com.digitinary.DStore.model.mapper.AddressMapper;
 import com.digitinary.DStore.model.mapper.UserMapper;
 import com.digitinary.DStore.model.request.CreateOrUpdateAddressRequest;
@@ -11,8 +11,8 @@ import com.digitinary.DStore.model.request.CreateUserRequest;
 import com.digitinary.DStore.model.request.UpdateUserRequest;
 import com.digitinary.DStore.model.response.AddressResponse;
 import com.digitinary.DStore.model.response.UserResponse;
-import com.digitinary.DStore.repository.AddressRepository;
-import com.digitinary.DStore.repository.UserRepository;
+import com.digitinary.DStore.repository.repo.AddressRepository;
+import com.digitinary.DStore.repository.repo.UserRepository;
 import jakarta.validation.ValidationException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -92,7 +92,6 @@ public class UserService {
         log.info("User deleted successfully.");
     }
 
-    // FIXME: this method keeps running into an infinite loop (StackOverFlowException)
     // NOTE: Fixed
     @Transactional
     public void addAndAssignAddress(Integer id, CreateOrUpdateAddressRequest request) {

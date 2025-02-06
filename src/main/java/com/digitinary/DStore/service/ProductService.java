@@ -1,16 +1,16 @@
 package com.digitinary.DStore.service;
 
-import com.digitinary.DStore.exception.ResourceNotFoundException;
-import com.digitinary.DStore.model.entity.Category;
-import com.digitinary.DStore.model.entity.Product;
+import com.digitinary.DStore.infra.exception.ResourceNotFoundException;
+import com.digitinary.DStore.repository.entity.Category;
+import com.digitinary.DStore.repository.entity.Product;
 import com.digitinary.DStore.model.mapper.CategoryMapper;
 import com.digitinary.DStore.model.mapper.ProductMapper;
 import com.digitinary.DStore.model.request.CreateCategoryRequest;
 import com.digitinary.DStore.model.request.CreateProductRequest;
 import com.digitinary.DStore.model.response.CategoryResponse;
 import com.digitinary.DStore.model.response.ProductResponse;
-import com.digitinary.DStore.repository.CategoryRepository;
-import com.digitinary.DStore.repository.ProductRepository;
+import com.digitinary.DStore.repository.repo.CategoryRepository;
+import com.digitinary.DStore.repository.repo.ProductRepository;
 import jakarta.persistence.criteria.Predicate;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;

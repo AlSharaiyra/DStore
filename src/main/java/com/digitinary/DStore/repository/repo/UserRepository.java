@@ -1,6 +1,6 @@
-package com.digitinary.DStore.repository;
+package com.digitinary.DStore.repository.repo;
 
-import com.digitinary.DStore.model.entity.User;
+import com.digitinary.DStore.repository.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

@@ -1,6 +1,6 @@
 package com.digitinary.DStore.model.response;
 
-import com.digitinary.DStore.enums.Gender;
+import com.digitinary.DStore.model.enums.Gender;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;

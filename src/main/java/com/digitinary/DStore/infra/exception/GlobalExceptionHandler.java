@@ -1,4 +1,4 @@
-package com.digitinary.DStore.exception;
+package com.digitinary.DStore.infra.exception;
 
 import jakarta.validation.ValidationException;
 import lombok.extern.log4j.Log4j2;

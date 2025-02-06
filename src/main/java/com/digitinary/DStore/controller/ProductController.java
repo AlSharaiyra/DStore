@@ -1,6 +1,6 @@
 package com.digitinary.DStore.controller;
 
-import com.digitinary.DStore.exception.ResourceNotFoundException;
+import com.digitinary.DStore.infra.exception.ResourceNotFoundException;
 import com.digitinary.DStore.model.request.CreateCategoryRequest;
 import com.digitinary.DStore.model.request.CreateProductRequest;
 import com.digitinary.DStore.model.response.CategoryResponse;

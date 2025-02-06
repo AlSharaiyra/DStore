@@ -1,4 +1,4 @@
-package com.digitinary.DStore.model.entity;
+package com.digitinary.DStore.repository.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

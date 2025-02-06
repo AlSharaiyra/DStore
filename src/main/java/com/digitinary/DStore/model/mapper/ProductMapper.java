@@ -1,7 +1,7 @@
 package com.digitinary.DStore.model.mapper;
 
-import com.digitinary.DStore.model.entity.Category;
-import com.digitinary.DStore.model.entity.Product;
+import com.digitinary.DStore.repository.entity.Category;
+import com.digitinary.DStore.repository.entity.Product;
 import com.digitinary.DStore.model.request.CreateProductRequest;
 import com.digitinary.DStore.model.response.ProductResponse;
 import org.mapstruct.Mapper;

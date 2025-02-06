@@ -1,4 +1,4 @@
-package com.digitinary.DStore.security.password;
+package com.digitinary.DStore.infra.security.password;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

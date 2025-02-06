@@ -1,7 +1,7 @@
 package com.digitinary.DStore.model.mapper;
 
-import com.digitinary.DStore.model.entity.Address;
-import com.digitinary.DStore.model.entity.User;
+import com.digitinary.DStore.repository.entity.Address;
+import com.digitinary.DStore.repository.entity.User;
 import com.digitinary.DStore.model.request.CreateOrUpdateAddressRequest;
 import com.digitinary.DStore.model.response.AddressResponse;
 import org.mapstruct.Mapper;

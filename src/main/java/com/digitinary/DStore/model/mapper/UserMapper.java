@@ -1,6 +1,6 @@
 package com.digitinary.DStore.model.mapper;
 
-import com.digitinary.DStore.model.entity.User;
+import com.digitinary.DStore.repository.entity.User;
 import com.digitinary.DStore.model.request.CreateUserRequest;
 
 import com.digitinary.DStore.model.response.UserResponse;

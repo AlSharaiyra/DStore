@@ -1,6 +1,6 @@
-package com.digitinary.DStore.model.entity;
+package com.digitinary.DStore.repository.entity;
 
-import com.digitinary.DStore.enums.Gender;
+import com.digitinary.DStore.model.enums.Gender;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

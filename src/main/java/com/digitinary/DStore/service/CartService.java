@@ -1,12 +1,12 @@
 package com.digitinary.DStore.service;
 
-import com.digitinary.DStore.exception.ResourceNotFoundException;
-import com.digitinary.DStore.model.entity.Cart;
-import com.digitinary.DStore.model.entity.CartItem;
-import com.digitinary.DStore.model.entity.Product;
+import com.digitinary.DStore.infra.exception.ResourceNotFoundException;
+import com.digitinary.DStore.repository.entity.Cart;
+import com.digitinary.DStore.repository.entity.CartItem;
+import com.digitinary.DStore.repository.entity.Product;
 import com.digitinary.DStore.model.request.CartItemRequest;
-import com.digitinary.DStore.repository.CartRepository;
-import com.digitinary.DStore.repository.ProductRepository;
+import com.digitinary.DStore.repository.repo.CartRepository;
+import com.digitinary.DStore.repository.repo.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
