@@ -108,4 +108,4 @@ Authorization: Bearer <your_token>
 Feel free to open issues and submit pull requests. Contributions are welcome!
 
 ---
-💡 **Developed by Walid Sharaiyra & Digitinary Internship Team**
+💡 **Developed by Walid Sharaiyra**
