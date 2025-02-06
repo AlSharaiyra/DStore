@@ -1,0 +1,27 @@
+1. Using a non-relational database instead of a relational on. this issue rises in cart_items and order_items.
+
+2. The difference between @NonNull from Lombok, @NonNull from Javax, @Basic(optional = false),@Column(nullable = false)?
+    Annotation	                 Purpose                                                 	 Enforced By Affects      Database Schema?
+    @NonNull (Lombok)	         Ensures a field is not null at runtime                   	 Java / Lombok	          ❌ No
+    @Basic(optional = false)	 Tells Hibernate this field must be set before persisting  	 JPA / Hibernate     	  ❌ No
+    @Column(nullable = false)	 Generates a NOT NULL constraint in the database	         Hibernate / Database	  ✅ Yes
+
+3. What date and time class to use when storing created_date, modified_date, expiry_date?
+
+4. Do we need to create a service for every entity or just create services for every scenario?
+
+5. Why is Omar using CrudRepository instead of JpaRepository?
+
+6. Note: To use @Transactional annotation, you need to configure transaction management by using
+ @EnableTransactionManagement to your main class of Spring Boot application. is that right?
+todo: you can search about this by your own.
+
+7. why do we use a Response entity and return it from a service method?
+why not just make the service method as void and in the controller return a ResponseEntity?
+
+8. @ResponseStatus on the custom exception vs @ControllerAdvice and @ExceptionHandler in the global exception handler:
+    #Feature#	                    #@ResponseStatus#	                            #@ExceptionHandler in @ControllerAdvice#
+    Custom HTTP Status	        ✅ Yes           	                        ✅ Yes
+    Custom JSON Response	    ❌ No (Only message)	                        ✅ Yes (Full control over response)
+    Logging or Extra Logic	    ❌ No	                                    ✅ Yes
+    Applies to All Controllers	❌ No (Only for the specific exception)      ✅ Yes (Global for all controllers)
